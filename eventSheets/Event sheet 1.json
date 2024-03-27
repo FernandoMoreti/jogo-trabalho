@@ -1,0 +1,683 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "pontos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 439656906811462
+		},
+		{
+			"eventType": "variable",
+			"name": "ranking",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 659005281766335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 474918137468062
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Sprite5",
+					"sid": 857687072958834,
+					"parameters": {
+						"object": "Sprite4",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Sprite5",
+					"sid": 666804621429816,
+					"parameters": {
+						"angle": "angle(Self.X, Self.Y, Mouse.X, Mouse.Y)"
+					}
+				}
+			],
+			"sid": 606703576977020
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 554915143449171,
+					"parameters": {
+						"first-value": "Mouse.X",
+						"comparison": 4,
+						"second-value": "Sprite4.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite4",
+					"sid": 593835601464071,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-flipped",
+					"objectClass": "Sprite5",
+					"sid": 669129558621597,
+					"parameters": {
+						"state": "not-flipped"
+					}
+				}
+			],
+			"sid": 274548599560083
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 788995727229702
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite4",
+					"sid": 145112008965113,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-flipped",
+					"objectClass": "Sprite5",
+					"sid": 241718325234163,
+					"parameters": {
+						"state": "flipped"
+					}
+				}
+			],
+			"sid": 500369222766910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 115809284053684,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Sprite4",
+					"sid": 640311059074531,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 444839257286820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 623912107034601,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Sprite4",
+					"sid": 422498319160829,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 928195846716281
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 921145554372334,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Sprite4",
+					"sid": 561416168953592,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 923150803671462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 589648800245582,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Sprite5",
+					"sid": 237416119580645,
+					"parameters": {
+						"object": "Sprite6",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 856726102059109
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 960721838736346,
+					"parameters": {
+						"first-value": "distance(Sprite4.X, Sprite4.Y, Sprite.X, Sprite.Y)",
+						"comparison": 3,
+						"second-value": "5000"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 784689256123630,
+					"parameters": {
+						"first-value": "Sprite4.X",
+						"comparison": 3,
+						"second-value": "Sprite.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Sprite",
+					"sid": 785077658115554,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 844395309816622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 415643347484315,
+					"parameters": {
+						"first-value": "distance(Sprite4.X, Sprite4.Y, Sprite.X, Sprite.Y)",
+						"comparison": 3,
+						"second-value": "5000"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 161292456841234,
+					"parameters": {
+						"first-value": "Sprite4.X",
+						"comparison": 5,
+						"second-value": "Sprite.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Sprite",
+					"sid": 603039516969404,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 270658580486159
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite4",
+					"sid": 145587997937279,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite4",
+					"sid": 834228835093522
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite5",
+					"sid": 141469607628678
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 125240107303208,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Button",
+					"sid": 567073563945993,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextInput",
+					"sid": 979673819644117,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite6",
+					"sid": 857593282030847
+				}
+			],
+			"sid": 403634559798540
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite6",
+					"sid": 387127106240716,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite",
+					"sid": 901537924861537
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite6",
+					"sid": 463807343222729
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 213207928832918,
+					"parameters": {
+						"variable": "pontos",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 174314321477658,
+					"parameters": {
+						"text": "pontos|\"\""
+					}
+				}
+			],
+			"sid": 112718478018568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 653946670949395,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 160038235362604,
+					"parameters": {
+						"object-to-create": "Sprite",
+						"layer": "1",
+						"x": "Sprite9.X",
+						"y": "Sprite9.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 835668682646369,
+					"parameters": {
+						"x": "Sprite9.X",
+						"y": "Sprite9.Y"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 782696352349855,
+					"parameters": {
+						"object-to-create": "Sprite",
+						"layer": "1",
+						"x": "Sprite10.X",
+						"y": "Sprite10.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 756961015250850,
+					"parameters": {
+						"x": "Sprite10.X",
+						"y": "Sprite10.Y"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 696577096125088,
+					"parameters": {
+						"object-to-create": "Sprite",
+						"layer": "1",
+						"x": "Sprite11.X",
+						"y": "Sprite11.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 615403337291241,
+					"parameters": {
+						"x": "Sprite11.X",
+						"y": "Sprite11.Y"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 283698127339184,
+					"parameters": {
+						"object-to-create": "Sprite",
+						"layer": "1",
+						"x": "Sprite12.X",
+						"y": "Sprite12.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 994893101414274,
+					"parameters": {
+						"x": "Sprite12.X",
+						"y": "Sprite12.Y"
+					}
+				}
+			],
+			"sid": 154131499463213
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 246819589092930
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Button",
+					"sid": 475374427916974,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 169487659221806,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextInput",
+					"sid": 651074516655111,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 829684600638072
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 788998578519614
+				}
+			],
+			"actions": [
+				{
+					"id": "post-to-url",
+					"objectClass": "AJAX",
+					"sid": 167183666583715,
+					"parameters": {
+						"tag": "\"Enviar\"",
+						"url": "\"https://jogo-facul-default-rtdb.firebaseio.com/ranking.json\"",
+						"data": "\"{\"\"\"&TextInput.Text&\"\"\" : \"&pontos&\"}\"",
+						"method": "\"PATCH\""
+					}
+				}
+			],
+			"sid": 840034811650079
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 681961465766710,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 505850998671484,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 950989010643702,
+					"parameters": {
+						"variable": "pontos",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 454552579562485
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button2",
+					"sid": 153399422014177
+				}
+			],
+			"actions": [
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 902209840782883,
+					"parameters": {
+						"tag": "\"Atualizar\"",
+						"url": "\"https://jogo-facul-default-rtdb.firebaseio.com/ranking.json\""
+					}
+				}
+			],
+			"sid": 981491466538942
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 760299747360430,
+					"parameters": {
+						"tag": "\"Atualizar\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 628537743506887,
+					"parameters": {
+						"variable": "ranking",
+						"value": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 143727634489187,
+					"parameters": {
+						"variable": "ranking",
+						"value": "replace(ranking,\"{\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 643425072581800,
+					"parameters": {
+						"variable": "ranking",
+						"value": "replace(ranking,\"}\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 780003787691917,
+					"parameters": {
+						"variable": "ranking",
+						"value": "replace(ranking,\"\"\"\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 830113337706231,
+					"parameters": {
+						"variable": "ranking",
+						"value": "replace(ranking,\",\",newline)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text3",
+					"sid": 835890483189875,
+					"parameters": {
+						"text": "ranking"
+					}
+				}
+			],
+			"sid": 938177488101052
+		}
+	],
+	"sid": 864669648014395
+}
