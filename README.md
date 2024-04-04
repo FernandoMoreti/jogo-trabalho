@@ -7,10 +7,10 @@ Ao final de sua vida ou seja quando um inimigo encostar em você, será aberto u
 # Jogabilidade:
 Você pode tanto usar as teclas A, W e D para se movimentar quanto <, ^ e >, com o mouse vc movimenta a arma e com o botão direito atira.
 <img src="photo1.png"/>
-<img src="photo2" />
-<img src="photo3" />
-<img src="photo4 (1)" />
+<img src="photo2.png" />
+<img src="photo3.png" />
+<img src="photo4 (1).png" />
 # LINK PARA O JOGO:
 
 https://brilliant-taiyaki-7cf2da.netlify.app/
-![photo1](https://github.com/FernandoMoreti/jogo-trabalho/assets/153198754/07ea95ba-3837-4dd9-b5be-b1543c09306d)
+
